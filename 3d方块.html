@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<script src="https://threejs.org/build/three.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单的3D游戏</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 创建场景
+        const scene = new THREE.Scene();
+
+        // 创建相机
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
+
+        // 创建渲染器
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // 创建立方体
+        const geometry = new THREE.BoxGeometry();
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        // 渲染场景
+        const animate = function () {
+            requestAnimationFrame(animate);
+
+            // 旋转立方体
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+
+            renderer.render(scene, camera);
+        };
+
+        // 处理窗口大小变化
+        window.addEventListener('resize', function () {
+            const newWidth = window.innerWidth;
+            const newHeight = window.innerHeight;
+
+            camera.aspect = newWidth / newHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(newWidth, newHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>
