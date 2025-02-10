@@ -1,0 +1,240 @@
+/* - 全局样式 */
+@font-face {
+    font-family: "Linotte";
+    src: url("../fonts/Linotte\ Regular.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Linotte";
+    src: url("../fonts/Linotte\ Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "HYZhengYuan";
+    src: url("../fonts/HYZhengYuan-55W.ttf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "HYZhengYuan";
+    src: url("../fonts/HYZhengYuan-85S.ttf") format("opentype");
+    font-weight: bold;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eeeeee;
+    color: #4c4948;
+    font-family: Linotte, HYZhengYuan, sans-serif;
+    font-weight: normal;
+}
+
+.page-head {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 320px;
+    background-color: #49b1f5;
+    background-image: url(../images/backgrounds/page-head/wallhaven-9delkw.jpg);
+    background-size: cover;
+    background-position: center 85%; /* 请根据需要调整图片位置 */
+    text-align: center;
+}
+
+.page-head > .title {
+    margin-top: 160px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.page-head > button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.page-head > button:hover {
+    background-color: #2980b9;
+}
+
+.primary-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+}
+
+.primary-container > .left-area {
+    max-width: 350px;
+    width: 30%;
+    margin-right: 16px;
+    transition: margin-top 0.2s ease-in;
+}
+
+.primary-container > .right-area {
+    max-width: 1050px;
+    width: 70%;
+}
+
+.right-area > .content-page {
+    position: relative;
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 12px;
+    padding: 20px 46px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 6px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+.right-area > .content-page::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 400px;
+    height: 500px;
+    background-color: #aaaaaa;
+    mask: url(../images/content_page_sticker.png) no-repeat center;
+    mask-size: contain;
+    z-index: 0;
+}
+
+.left-area > .cards > .card-item {
+    width: 100%;
+    margin-top: 16px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 6px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+}
+
+.left-area > .cards > .card-item > h2 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.left-area > .cards > .card-item#personal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-area > .cards > .card-item#personal-info > .avatar {
+    width: 120px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.left-area > .cards > .card-item#personal-info > .name {
+    margin: 12px 0 14px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.left-area > .cards > .card-item#personal-info > .social-icons i {
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: #b5e0ff;
+    color: #304660;
+}
+
+.left-area > .cards > .card-item#personal-info > .social-icons a + a {
+    margin-left: 14px;
+}
+
+.left-area > .cards > .card-item#hitokoto > .content a#hitokoto-text {
+    color: unset;
+}
+
+.left-area > .cards > .card-item > .content > .settings-item {
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: #c0e5ff;
+}
+
+.left-area > .cards > .card-item > .content > .settings-item > .title {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.left-area > .cards > .card-item > .content > .settings-item > .themes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.left-area > .cards > .card-item > .content > .settings-item > .themes > .theme-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.left-area > .cards > .card-item > .content > .settings-item > .themes > .theme-item,
+.left-area > .cards > .card-item > .content > .settings-item > .themes > .theme-item * {
+    cursor: url(https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cursor/ayuda.cur), pointer;
+}
+
+.left-area > .cards > .card-item > .content > .settings-item > .themes > .theme-item.enable {
+    box-shadow: 0px 0px 2px 2px #2a92d8;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    margin-top: 70px;
+    background-color: #e5e5e5;
+    box-shadow: inset 0 -4px 8px 6px rgba(0, 0, 0, 0.06);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer > br {
+    position: relative;
+}
+
+.footer > .line-break {
+    display: block;
+    margin: 2px 0;
+    color: #aaaaaa;
+}
+
+.footer .icp-link {
+    color: #aaaaaa;
+}
