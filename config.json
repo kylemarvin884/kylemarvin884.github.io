@@ -1,0 +1,49 @@
+{
+    "title": "Kyle884",
+    "theme": {
+        "theme": "defdark",
+        "displayName": "ACG-Home",
+        "colors": {
+            "autoSwitch": {
+                "displayName": "Auto",
+                "light": "light",
+                "dark": "dark",
+                "icon": {
+                    "icon": "fa-solid fa-circle-half-stroke",
+                    "color": "#808080",
+                    "background": "linear-gradient(45deg, #eeeeee 50%, #1c1c1c 50%)"
+                }
+            },
+            "enable": ["light", "!autoSwitch", "dark"],
+            "default": "!autoSwitch"
+        }
+    },
+    "masterInfo": {
+        "name": "Kyle8884",
+        "avatar": "./assets/images/avatar.png",
+        "website": "kylemarvin884.github.io",
+        "socialLink": {
+            "link": {
+                "bilibili": "https://space.bilibili.com/3546617240095558",
+                "github": "https://github.com/kylemarvin884",
+                "email": "kylejmarvin@gmail.com"
+            },
+            "icon": {
+                "bilibili": "fa-brands fa-bilibili",
+                "github": "fa-brands fa-github",
+                "email": "fa-solid fa-envelope"
+            },
+            "enable": ["bilibili", "github", "email"]
+        }
+    },
+    "pageHead": {
+        "typedContent": ["多一事不如少一事", "Let a sleeping dog lie"]
+    },
+    "icp": {
+        "info": {
+            
+            
+        },
+        "enable": ["moegov", "china"]
+    }
+}
