@@ -15,7 +15,7 @@ class ThemeManager {
     // 解析主题
     parse() {
         // 构建主题目录
-        themePath = window.location.href + "/assets/themes/" + config.content.theme.theme;
+        themePath = new URL("./assets/themes/" + config.content.theme.theme, document.baseURI).href.replace(/\/$/, "");
         console.log("%c[I]%c " + `Theme Path: ${themePath}`, "background-color: #00896c;", "");
 
         // 使用 XML 获取主题的元数据
@@ -252,7 +252,8 @@ const themeManager = new ThemeManager();
 document.addEventListener("DOMContentLoaded", () => {
     // 如果第一次访问，将配色方案设置为默认值
     if (localStorage.getItem("theme.color") === null) {
-        themeManager.setColor(config.content.theme.colors.default);
+        localStorage.setItem("theme.color", config.content.theme.colors.default);
+        themeManager.load();
     } else {
         // 否则正常加载主题
         themeManager.load();

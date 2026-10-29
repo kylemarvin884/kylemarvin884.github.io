@@ -238,3 +238,15 @@ body {
 .footer .icp-link {
     color: #aaaaaa;
 }
+/* 保证搜索过滤在所有布局中生效 */
+.card-item[hidden] { display: none !important; }
+
+/* 提升键盘用户的可访问性 */
+a:focus-visible, button:focus-visible, input:focus-visible, .theme-item:focus-visible {
+    outline: 3px solid #2a92d8;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}

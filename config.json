@@ -1,5 +1,5 @@
 {
-    "title": "Kyle884",
+    "title": "Kyle | 个人主页",
     "theme": {
         "theme": "defdark",
         "displayName": "ACG-Home",
@@ -14,14 +14,18 @@
                     "background": "linear-gradient(45deg, #eeeeee 50%, #1c1c1c 50%)"
                 }
             },
-            "enable": ["light", "!autoSwitch", "dark"],
+            "enable": [
+                "light",
+                "!autoSwitch",
+                "dark"
+            ],
             "default": "!autoSwitch"
         }
     },
     "masterInfo": {
-        "name": "Kyle8884",
+        "name": "Kyle",
         "avatar": "./assets/images/avatar.png",
-        "website": "kylemarvin884.github.io",
+        "website": "https://kylemarvin884.github.io/",
         "socialLink": {
             "link": {
                 "bilibili": "https://space.bilibili.com/3546617240095558",
@@ -33,17 +37,29 @@
                 "github": "fa-brands fa-github",
                 "email": "fa-solid fa-envelope"
             },
-            "enable": ["bilibili", "github", "email"]
+            "enable": [
+                "bilibili",
+                "github",
+                "email"
+            ]
         }
     },
     "pageHead": {
-        "typedContent": ["多一事不如少一事", "Let a sleeping dog lie"]
+        "typedContent": [
+            "你好，我是 Kyle 👋",
+            "欢迎来到我的个人网站",
+            "热爱编程与游戏开发"
+        ],
+        "announcements": [
+            "欢迎来到 Kyle 的个人网站！",
+            "分享编程、游戏开发与有趣的项目。"
+        ]
     },
     "icp": {
         "info": {
-            
-            
+            "code": {},
+            "link": {}
         },
-        "enable": ["moegov", "china"]
+        "enable": []
     }
 }
