@@ -85,7 +85,7 @@ function renderMarkdown() {
 
     // 遍历每个元素，获取其 src 指定的 Markdown 文件并渲染
     markdownElements.forEach(element => {
-        const src = element.getAttribute("src"); // 获取 src 属性
+        const src = element.getAttribute("src") || element.getAttribute("data-src"); // 获取 src 属性
 
         if (src) {
             // 使用 fetch 来获取 .md 文件内容
