@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderMarkdown();
 
     // 加载页首打字标题
-    var typed = new Typed(".page-head > .title", {
+    if (typeof Typed === "function") new Typed(".page-head > .title", {
         strings: config.content.pageHead.typedContent,
         startDelay: 300,
         backDelay: 1000,
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const link = config.content.masterInfo.socialLink.link[key]; // 获取对应的 link
             if (icon && link) {
                 // 创建 <a> 标签
-                return `<a href="${link}" target="_blank"><i class="${icon}"></i></a>`;
+                return `<a href="${link.startsWith("mailto:") || key !== "email" ? link : "mailto:" + link}" target="_blank" rel="noopener noreferrer" aria-label="${key}"><i class="${icon}" aria-hidden="true"></i></a>`;
             }
             return "";
         })
